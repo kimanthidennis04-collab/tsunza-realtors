@@ -1,0 +1,338 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head> 
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Tsunza Realtors & Services | Premium Real Estate & Business Consultancy</title>  
+    <meta name="description" content="Tsunza Realtors & Services in Mombasa provides premium real estate solutions, high-yield land investments, and expert corporate business consultancy. Secure your assets today.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Tsunza Realtors & Services | Premium Real Estate & Business Consultancy</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <style>  
+        :root {  
+            --primary-blue: #0b3c5d;  
+            --sky-blue: #328cc1;  
+            --gold: #d9b310;  
+            --dark-gold: #b89207;  
+            --light-bg: #f8fafc;  
+            --dark-text: #1e293b;  
+            --border-color: #e2e8f0;  
+        }  
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }  
+        body { color: var(--dark-text); background-color: #ffffff; line-height: 1.6; }  
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 1001; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #20b85a; }
+
+        header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 15px 8%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 1000; }  
+        .logo-area { display: flex; flex-direction: column; }  
+        .logo-title { font-size: 26px; font-weight: 800; color: var(--primary-blue); letter-spacing: 1.5px; line-height: 1.1; }  
+        .logo-sub { font-size: 10px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 2.5px; margin-top: 2px; }  
+        .nav-links { display: flex; align-items: center; gap: 25px; }  
+        .nav-links a { text-decoration: none; color: var(--dark-text); font-weight: 500; font-size: 15px; transition: color 0.3s; }  
+        .nav-links a:hover { color: var(--sky-blue); }  
+        .cta-btn { background-color: var(--primary-blue); color: #fff !important; padding: 12px 24px; border-radius: 6px; font-weight: 600 !important; transition: background-color 0.3s, transform 0.2s; box-shadow: 0 4px 12px rgba(11, 60, 93, 0.2); }  
+        .cta-btn:hover { background-color: var(--sky-blue); transform: translateY(-1px); }  
+        .hero { background: linear-gradient(135deg, rgba(11, 60, 93, 0.92) 0%, rgba(29, 78, 137, 0.85) 100%), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover; color: #ffffff; padding: 140px 8% 120px 8%; text-align: center; }  
+        .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 20px; letter-spacing: -0.5px; }  
+        .hero p { font-size: 22px; font-style: italic; color: var(--gold); margin-bottom: 35px; font-weight: 300; }  
+        .hero .hero-buttons { display: flex; justify-content: center; gap: 15px; }  
+        .btn-secondary { background: transparent; color: #ffffff; border: 2px solid #ffffff; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s; }  
+        .btn-secondary:hover { background: #ffffff; color: var(--primary-blue); }  
+        .about-section { padding: 90px 8%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }  
+        .about-img { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }  
+        .about-text h2 { font-size: 36px; color: var(--primary-blue); margin-bottom: 20px; font-weight: 700; }  
+        .about-text p { font-size: 16px; color: #475569; margin-bottom: 20px; line-height: 1.8; }  
+        .services-section { padding: 90px 8%; background-color: var(--light-bg); text-align: center; }  
+        .services-section h2 { font-size: 36px; color: var(--primary-blue); margin-bottom: 50px; position: relative; display: inline-block; }  
+        .services-section h2::after { content: ''; width: 80px; height: 4px; background-color: var(--gold); position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); }  
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }  
+        .service-card { background: #ffffff; padding: 35px 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.01); transition: all 0.3s ease; text-align: left; border-top: 4px solid var(--sky-blue); }  
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.07); border-top-color: var(--gold); }  
+        .icon-wrapper { background-color: rgba(50, 140, 193, 0.1); width: 55px; height: 55px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; }  
+        .icon-wrapper i { color: var(--primary-blue); font-size: 22px; }  
+        .service-card h3 { font-size: 20px; color: var(--primary-blue); margin-bottom: 12px; font-weight: 600; }  
+        .service-card p { font-size: 14px; color: #64748b; }  
+        .showcase-section { padding: 90px 8%; text-align: center; }  
+        .showcase-section h2 { font-size: 36px; color: var(--primary-blue); margin-bottom: 40px; }  
+        .showcase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; justify-content: center; }  
+        .showcase-item { border-radius: 10px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); background: #fff; max-width: 360px; margin: 0 auto; width: 100%; }  
+        .showcase-item img { width: 100%; height: 340px; object-fit: cover; }  
+        .showcase-desc { padding: 20px; text-align: left; }  
+        .showcase-desc h4 { color: var(--primary-blue); font-size: 18px; margin-bottom: 5px; }  
+        .showcase-desc p { color: #64748b; font-size: 14px; }  
+        .contact-form-section { background-color: var(--light-bg); padding: 90px 8%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }  
+        .form-details h2 { font-size: 36px; color: var(--primary-blue); margin-bottom: 20px; }  
+        .form-details p { color: #475569; margin-bottom: 30px; }  
+        .form-card { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); }  
+        .form-group { margin-bottom: 20px; }  
+        .form-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; color: var(--dark-text); }  
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 15px; background-color: #fff; }  
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--sky-blue); box-shadow: 0 0 0 3px rgba(50, 140, 193, 0.15); }  
+        .submit-btn { background-color: var(--gold); color: #fff; width: 100%; padding: 14px; border: none; border-radius: 6px; font-size: 16px; font-weight: 700; cursor: pointer; transition: background-color 0.3s; }  
+        .submit-btn:hover { background-color: var(--dark-gold); }  
+        footer { background-color: var(--primary-blue); color: #ffffff; padding: 80px 8% 30px 8%; }  
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 50px; }  
+        .footer-info h3 { color: var(--gold); margin-bottom: 25px; font-size: 20px; font-weight: 600; }  
+        .contact-item { display: flex; align-items: flex-start; margin-bottom: 20px; }  
+        .contact-item i { margin-right: 15px; margin-top: 5px; color: var(--gold); font-size: 16px; }  
+        .contact-item p { font-size: 14px; color: #cbd5e1; line-height: 1.7; }  
+        .footer-bottom { text-align: center; padding-top: 30px; font-size: 14px; color: #94a3b8; }  
+        @media (max-width: 968px) { .about-section, .contact-form-section { grid-template-columns: 1fr; gap: 40px; } header { padding: 20px 5%; flex-direction: column; gap: 20px; text-align: center; } .nav-links { flex-direction: column; gap: 15px; } .hero h1 { font-size: 36px; } .hero p { font-size: 18px; } }  
+    </style>  
+</head>  
+<body>  
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/254708295591" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header>  
+        <div class="logo-area">  
+            <span class="logo-title">TSUNZA</span>  
+            <span class="logo-sub">REALTORS & SERVICES</span>  
+        </div>  
+        <nav class="nav-links">  
+            <a href="#">Home</a>  
+            <a href="#about">About Us</a>  
+            <a href="#services">Our Services</a>  
+            <a href="#showcase">Portfolio</a>  
+            <a href="#inquiry" class="cta-btn">Inquire Now</a>  
+        </nav>  
+    </header>  
+
+    <section class="hero">  
+        <h1>High-Yield Real Estate & Elite Corporate Solutions</h1>  
+        <p>“Maximizing Asset Value. Securing Generational Wealth.”</p>  
+        <div class="hero-buttons">  
+            <a href="#services" class="cta-btn">Explore Services</a>  
+            <a href="#inquiry" class="btn-secondary">Get In Touch</a>  
+        </div>  
+    </section>  
+
+    <section class="about-section" id="about">  
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Premium Coast Mansion" class="about-img">  
+        <div class="about-text">  
+            <h2>Welcome to Tsunza Realtors & Services</h2>  
+            <p>We are a premier real estate acquisition and professional corporate service consultancy based in Mombasa. Built on a foundation of integrity and data-driven market strategies, we empower clients to secure high-yield land investments while guiding businesses through seamless corporate infrastructure developments.</p>  
+            <p>Our holistic approach bridges the gap between securing generational physical assets and ensuring rigid legal compliance for businesses scaling in the modern landscape.</p>  
+        </div>  
+    </section>  
+
+    <section class="services-section" id="services">  
+        <h2>Premium Commercial Services</h2>  
+        <div class="services-grid">  
+            <div class="service-card" style="border-top-color: var(--gold);">  
+                <div class="icon-wrapper"><i class="fa-solid fa-building-user"></i></div>  
+                <h3>Premium Property Management</h3>  
+                <p>Complete asset oversight for landlords. We manage tenant placement, aggressive rental collections, and structural asset maintenance to assure passive cash-flows.</p>  
+            </div>  
+            <div class="service-card" style="border-top-color: var(--gold);">  
+                <div class="icon-wrapper"><i class="fa-solid fa-handshake-angle"></i></div>  
+                <h3>Joint Venture (JV) Facilitation</h3>  
+                <p>Architecting highly profitable alliances between prime coastal land owners and elite capital investors to execute major residential and commercial structural developments.</p>  
+            </div>  
+            <div class="service-card">  
+                <div class="icon-wrapper"><i class="fa-solid fa-house-chimney"></i></div>  
+                <h3>Real Property Sale & Purchase</h3>  
+                <p>Facilitating secure, vetted transactions for residential plots, commercial properties, and acreage within the coastal region.</p>  
+            </div>  
+            <div class="service-card">  
+                <div class="icon-wrapper"><i class="fa-solid fa-briefcase"></i></div>  
+                <h3>Business Registration Services</h3>  
+                <p>Streamlined structures to register new corporate entities, partnerships, and sole proprietorships safely matching local legal regulations.</p>  
+            </div>  
+            <div class="service-card">  
+                <div class="icon-wrapper"><i class="fa-solid fa-chart-line"></i></div>  
+                <h3>Strategic Marketing Architecture</h3>  
+                <p>Custom commercial outreach architectures to give your projects maximum visibility and connect directly with high-intent target buyers.</p>  
+            </div>  
+            <div class="service-card" style="border-top-color: var(--gold);">  
+                <div class="icon-wrapper"><i class="fa-solid fa-compass-drafting"></i></div>  
+                <h3>Physical Layout Designing</h3>  
+                <p>Advanced engineering and modern physical layout modeling for raw acreage before splitting titles, optimizing maximum plot utilization metrics.</p>  
+            </div>  
+            <div class="service-card">  
+                <div class="icon-wrapper"><i class="fa-solid fa-map"></i></div>  
+                <h3>Land Subdivision</h3>  
+                <p>Precise layout partitioning of substantial land parcels into clean, single commercial titles with local surveying compliance.</p>  
+            </div>  
+            <div class="service-card">  
+                <div class="icon-wrapper"><i class="fa-solid fa-file-signature"></i></div>  
+                <h3>Land Registration & Conveyancing</h3>  
+                <p>Navigating land registries expertly to transition ownership titles cleanly and finalize your absolute protection legally.</p>  
+            </div>  
+            <div class="service-card" style="border-top-color: var(--gold);">  
+                <div class="icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>  
+                <h3>Rigid Title Due Diligence</h3>  
+                <p>Comprehensive corporate property searches and registry verifications to protect local and international buyers from land cartels and title overlapping scams.</p>  
+            </div>  
+            <div class="service-card" style="border-top-color: var(--gold);">  
+                <div class="icon-wrapper"><i class="fa-solid fa-list-check"></i></div>  
+                <h3>Property Development & Coordination</h3>  
+                <p>Acting as the central link between land owners, architects, and structural engineers to completely manage high-yield projects from ground-breaking to key handover.</p>  
+            </div>  
+            <div class="service-card">  
+                <div class="icon-wrapper"><i class="fa-solid fa-scale-balanced"></i></div>  
+                <h3>Estate Planning & Advisory</h3>  
+                <p>Assisting families in structuring their property portfolios into legal trusts or family-owned corporate networks to ensure clean, frictionless wealth transition across generations.</p>  
+            </div>  
+            <div class="service-card" style="border-top-color: var(--gold);">  
+                <div class="icon-wrapper"><i class="fa-solid fa-coins"></i></div>  
+                <h3>Property Taxation Optimization</h3>  
+                <p>Providing executive legal guidance through rental income taxes, capital gains obligations, and stamp duties to maximize corporate and individual asset returns safely.</p>  
+            </div>  
+            <div class="service-card">  
+                <div class="icon-wrapper"><i class="fa-solid fa-building-flag"></i></div>  
+                <h3>Corporate Site Selection</h3>  
+                <p>Strategic placement and site sourcing for logistics firms, scaling regional retail operations, and corporate offices based on local zoning guidelines and target market demographics.</p>  
+            </div>  
+        </div>  
+    </section>  
+
+    <section class="showcase-section" id="showcase">  
+        <h2>Strategic Portfolios & Asset Management</h2>  
+        <div class="showcase-grid">  
+            <div class="showcase-item">  
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt="Luxury Real Estate Mombasa">  
+                <div class="showcase-desc">  
+                    <h4>Luxury Property Portfolios</h4>  
+                    <p>High-end coastal rentals and commercial blocks under active Tsunza management infrastructure.</p>  
+                </div>  
+            </div>  
+            <div class="showcase-item">  
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" alt="Prime Development Plots">  
+                <div class="showcase-desc">  
+                    <h4>Vetted Gated Community Land</h4>  
+                    <p>Fully subdivided plots with ready individual title deeds in high-growth zones.</p>  
+                </div>  
+            </div>  
+            <div class="showcase-item">  
+                <img src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?auto=format&fit=crop&w=600&q=80" alt="Corporate Joint Venture Office">  
+                <div class="showcase-desc">  
+                    <h4>Joint Venture Commercial Setups</h4>  
+                    <p>Facilitating large-scale corporate infrastructure mergers and brand registration scaling across Kenya.</p>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+
+    <section class="showcase-section" id="team" style="background-color: #ffffff; padding-top: 0;">  
+        <h2>Corporate Leadership</h2>  
+        <p style="color: #64748b; max-width: 600px; margin: -20px auto 40px auto; font-size: 15px;">The strategic minds driving secure acquisitions and corporate asset growth in the coastal region.</p>  
+        <div class="showcase-grid" style="max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">  
+            <div class="showcase-item" style="border-top: 4px solid var(--gold); flex: 1; min-width: 280px; max-width: 340px;">  
+                <img src="mirriam.jpeg" alt="Mirriam Nzangi Matei" style="width: 100%; height: 380px; object-fit: cover; object-position: center 20%;">  
+                <div class="showcase-desc" style="text-align: center;">  
+                    <h4 style="font-size: 19px; font-weight: 700;">Mirriam Nzangi Matei</h4>  
+                    <p style="color: var(--primary-blue); font-weight: 600; font-size: 13px; margin-top: 4px; text-transform: uppercase; letter-spacing: 1px;">Founder & Managing Director</p>  
+                    <p style="font-size: 13px; color: #64748b; margin-top: 6px; font-weight: 500;">miriammatei@yahoo.com</p>  
+                </div>  
+            </div>  
+            <div class="showcase-item" style="border-top: 4px solid var(--primary-blue); flex: 1; min-width: 280px; max-width: 340px; background: #fafafa; display: flex; flex-direction: column; justify-content: center;">  
+                <div style="padding: 60px 20px; text-align: center; margin: auto;">  
+                    <div style="background: rgba(11, 60, 93, 0.05); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto;">  
+                        <i class="fa-solid fa-user-tie" style="font-size: 32px; color: var(--primary-blue);"></i>  
+                    </div>  
+                    <h4 style="font-size: 18px; color: var(--primary-blue);">Director of Operations</h4>  
+                    <p style="color: #64748b; font-size: 13px; margin-top: 8px; max-width: 220px; line-height: 1.5;">Operational infrastructure, partnership scaling, and logistics coordination execution.</p>  
+                    <p style="font-size: 12px; color: var(--sky-blue); font-weight: 600; margin-top: 15px;">operations@tsunzarealtors.com</p>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+
+    <section class="showcase-section" style="background-color: var(--light-bg); border-top: 1px solid var(--border-color);">  
+        <h2>Client Reviews & Comments</h2>  
+        <p style="color: #64748b; margin: -20px auto 30px auto; font-size: 14px;">What investors say about our coastal land acquisition frameworks.</p>  
+        <div style="max-width: 600px; margin: 0 auto; text-align: left; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">  
+            <div style="margin-bottom: 15px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px;">  
+                <strong style="color: var(--primary-blue);">John K. Mbuvi</strong> <small style="color: #94a3b8; margin-left: 10px;">Verified Land Buyer</small>  
+                <p style="font-size: 14px; color: #475569; margin-top: 5px;">"The title deeds for our Diani plot subdivision were processed clean and transparently. Elite service defaults!"</p>  
+            </div>  
+            <form onsubmit="event.preventDefault(); alert('Your comment is queued! It will appear publicly once authorized by the Tsunza Admin panel.');" style="margin-top: 20px;">  
+                <label style="font-size: 13px; font-weight: 600; display: block; margin-bottom: 5px;">Leave a Comment / Review</label>  
+                <textarea rows="3" placeholder="Share your experience with our consultancy..." style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 14px; margin-bottom: 10px;" required></textarea>  
+                <button type="submit" style="background: var(--primary-blue); color: #fff; border: none; padding: 8px 16px; border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer;">Post Comment</button>  
+            </form>  
+        </div>  
+    </section>  
+
+    <section class="contact-form-section" id="inquiry">  
+        <div class="form-details">  
+            <h2>Ready to Begin Your Asset Growth Journey?</h2>  
+            <p>Schedule a secure private consultation session with an expert consultant today. Fill out your requirements, and a dedicated associate will get in touch directly within one business day.</p>  
+            <div class="contact-item">  
+                <i class="fa-solid fa-clock"></i>  
+                <p><strong>Response Turnaround:</strong><br>Less than 24 business hours.</p>  
+            </div>  
+        </div>  
+        <div class="form-card">  
+            <form onsubmit="event.preventDefault(); alert('Inquiry logged successfully! One of our experts will contact you soon.');">  
+                <div class="form-group">  
+                    <label for="name">Your Full Name</label>  
+                    <input type="text" id="name" placeholder="John Doe" required>  
+                </div>  
+                <div class="form-group">  
+                    <label for="phone">Phone Number</label>  
+                    <input type="tel" id="phone" placeholder="+254 748 592 251" required>  
+                </div>  
+                <div class="form-group">  
+                    <label for="service">Select Requested Service</label>  
+                    <select id="service" required>  
+                        <option value="">-- Choose Option --</option>  
+                        <option value="property">Real Property Sale & Purchase</option>  
+                        <option value="management">Premium Property Management</option>  
+                        <option value="jv">Joint Venture Facilitation</option>  
+                        <option value="registration">Business Registration</option>  
+                        <option value="land">Land Subdivision & Layout Design</option>  
+                    </select>  
+                </div>  
+                <div class="form-group">  
+                    <label for="msg">Brief Message Requirements</label>  
+                    <textarea id="msg" rows="4" placeholder="Describe your asset or corporate target goals..."></textarea>  
+                </div>  
+                <button type="submit" class="submit-btn">Submit Service Request</button>  
+            </form>  
+        </div>  
+    </section>  
+
+    <footer>  
+        <div class="footer-grid">  
+            <div class="footer-info">  
+                <h3>About Tsunza</h3>  
+                <p style="color: #cbd5e1; font-size: 14px;">We provide comprehensive real estate solutions and business consultancy designed to foster sustainable commercial development and asset expansion.</p>  
+            </div>  
+            <div class="footer-info">  
+                <h3>Contact Details</h3>  
+                <div class="contact-item">  
+                    <i class="fa-solid fa-phone"></i>  
+                    <p>+254 748 592251<br>(+254) 222434451</p>  
+                </div>  
+                <div class="contact-item">  
+                    <i class="fa-solid fa-envelope"></i>  
+                    <p>info@tsunzarealtors.com<br>sales@tsunzarealtors.com</p>  
+                </div>  
+            </div>  
+            <div class="footer-info">  
+                <h3>Our Location</h3>  
+                <div class="contact-item" style="display: block;">  
+                    <i class="fa-solid fa-location-dot" style="margin-bottom: 10px;"></i>  
+                    <p style="margin-bottom: 15px;">Diani Beach Hospital Building,<br>Ground Floor, Likoni-Diani Rd, Mombasa<br>P.O. BOX 86312–80100,<br>MOMBASA, Kenya</p>  
+                    <!-- Google Maps Embed -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.207851670966!2d39.5843187!3d-4.2885994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1840134440333333%3A0x3333333333333333!2sDiani%20Beach%20Hospital!5e0!3m2!1sen!2ske!4v1718654321000!5m2!1sen!2ske" width="100%" height="200" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>  
+            </div>  
+        </div>  
+        <div class="footer-bottom">  
+            &copy; 2026 Tsunza Realtors & Services. All Rights Reserved. | www.tsunzarealtors.com  
+        </div>  
+    </footer>
+
+</body>  
+</html>
